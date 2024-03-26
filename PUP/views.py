@@ -10,7 +10,28 @@ def query(request):
     return render(request, 'query.html')
 def profile(request):
     return render(request, 'profile.html')
-def register(request):
-    return render(request, 'register.html')
 def login(request):
     return render(request, 'login.html')
+# def register(request):
+#     return render(request, 'register.html')
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = UserCreationForm()
+    return render(request,'register.html',{'form':form})
+
+def login(request):
+    if request.method == "POST":
+        form = AuthenticationForm(request = request, data = request.POST)
+        if form.is_valid():
+            uname = form.cleaned_data['username']
+            upass = form.cleaned_data['password']
+            user = authenticate(Username = uname, Password = upass)
+            return render(request, 'profile.html')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'login.html', {'form':form})

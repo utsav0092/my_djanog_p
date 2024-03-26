@@ -20,7 +20,61 @@
         </nav>
       </div> -->
 
-    <h1>This is a About page</h1>
+    <!-- <h1>This is a About page</h1> -->
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+      .container {
+          max-width: 800px;
+          margin: 20px auto;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+          color: #333;
+          text-align: center;
+      }
+      p {
+          line-height: 1.6;
+      }
+      .profile {
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      /*.profile img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 10px;
+      }*/
+      .profile h2 {
+          margin: 0;
+          color: #333;
+      }
+      .profile p {
+          color: #666;
+          margin-top: 5px;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <h1>About the Vg<strong>O</strong>app</h1>
+      <div class="profile">
+          <!-- <img src="https://via.placeholder.com/150" alt="Developer's Photo"> -->
+          <h2>Develper's app</h2>
+          <p>About section</p>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac justo sit amet felis dapibus viverra at et elit. Curabitur non convallis magna. Nulla facilisi. Phasellus rutrum sollicitudin lacus, vel consectetur libero tempor sed. Donec nec dolor non justo facilisis blandit.</p>
+      <p>Aliquam erat volutpat. Cras eget vestibulum lectus, sit amet commodo tortor. Vestibulum eu pharetra libero. Mauris accumsan metus sit amet urna consectetur, vitae vestibulum dolor efficitur.</p>
+      <p>Proin aliquet justo sit amet dui viverra, nec ultricies nulla venenatis. Integer sit amet ex vitae nisi vestibulum egestas. Vivamus ut lorem sit amet libero rutrum vestibulum. Sed scelerisque mi at sapien dignissim, nec lobortis quam suscipit.</p>
     <a href="{% url 'index' %}">Go back</a>
 </body>
 </html>
